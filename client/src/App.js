@@ -7,6 +7,7 @@ import Login from './components/auth/Login';
 import Alerts from './components/layout/Alerts';
 import SavedList from './components/pages/SavedList';
 import PrivateRoute from './components/routing/PrivateRoute';
+import LandingPage from './components/layout/LandingPage';
 import './App.css';
 import ContactState from './context/contact/ContactState';
 import AuthState from './context/auth/AuthState';
@@ -30,7 +31,7 @@ const App = () => {
       <div className="container">
         <Alerts />
         <Switch>
-          <PrivateRoute exact path='/' component={Login}/>
+          <PrivateRoute exact path='/' component={LandingPage}/>
           <Route exact path='/savedlist' component={SavedList}/>
           <Route exact path='/register' component={Register}/>
           <Route exact path='/login' component={Login}/>
