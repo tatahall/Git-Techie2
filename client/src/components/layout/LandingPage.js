@@ -9,6 +9,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { spacing } from "@material-ui/system";
+import About from "./About";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
@@ -26,8 +27,7 @@ const useStyles = makeStyles(theme => ({
 const backgroundImage = {
   backgroundImage:
     "url('https://images.pexels.com/photos/273230/pexels-photo-273230.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')",
-  height: "100vh",
-  width: "100vh",
+  height: "80vh",
   color: "#fff"
 };
 
@@ -36,6 +36,7 @@ export default function MediaCard() {
 
   return (
     <React.Fragment>
+      <About />
       <div className="Home" align="center" style={backgroundImage}>
         <Grid container justify="center" spacing={2}>
           <Grid item xs={6} sm={3}>

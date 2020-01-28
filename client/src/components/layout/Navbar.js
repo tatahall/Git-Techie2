@@ -1,5 +1,6 @@
 import React, {Fragment,useContext} from 'react';
 import PropTypes from 'prop-types';
+import logo from "./images/logo.png";
 import { Link } from 'react-router-dom';
 import AuthContext from '../../context/auth/authContext';
 
@@ -41,7 +42,9 @@ const Navbar = ({title,icon }) => {
   return(
     <div className='navbar bg-primary'>
       <h1>
-        <i className={icon}/> {title}
+      <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
       </h1>
       <ul>
         {isAuthenticated? authLinks : guestLinks}
